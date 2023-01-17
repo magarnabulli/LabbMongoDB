@@ -44,7 +44,7 @@ namespace LabbMongoDBNeliz.DAO
                 return true;
             }
         }
-     
+
         List<ProductModel> IProductDAO.ReadAll()
         {
             List<ProductModel> productList = new List<ProductModel>();
@@ -73,16 +73,19 @@ namespace LabbMongoDBNeliz.DAO
         ProductModel IProductDAO.ReadOne(string name)
         {
             ProductModel tmp = new ProductModel();
-            var collection = GetCollection();
-            var collectionFilter = Builders<BsonDocument>.Filter.Eq("name", name);
-            var prd = collection.Find(collectionFilter).FirstOrDefault();
-            ProductModel prduct = BsonSerializer.Deserialize<ProductModel>(prd);
-            return prduct;
+            try
+            {
+                var collection = GetCollection();
+                var collectionFilter = Builders<BsonDocument>.Filter.Eq("name", name);
+                var prd = collection.Find(collectionFilter).FirstOrDefault();
+                ProductModel prduct = BsonSerializer.Deserialize<ProductModel>(prd);
+                return prduct;
+            }
+            catch
+            {
+                return tmp;
+            }
 
-        }
-        ProductModel IProductDAO.ReadOneWithFilter()
-        {
-            throw new NotImplementedException();
         }
         bool IProductDAO.Update(ProductModel product, string[] values)
         {
@@ -148,20 +151,6 @@ namespace LabbMongoDBNeliz.DAO
                 var collection = GetCollection();
                 var deleteFilter = Builders<BsonDocument>.Filter.Eq("_id", product.id);
                 collection.DeleteOne(deleteFilter);
-                return true;
-            }
-            catch
-            {
-                return false;
-            }
-        }
-        bool IProductDAO.DeleteManyWithFilter(string element)
-        {
-            try
-            {
-                var collection = GetCollection();
-                var deleteFilter = Builders<BsonDocument>.Filter.ElemMatch<BsonValue>("category", element);
-                collection.DeleteMany(deleteFilter);
                 return true;
             }
             catch

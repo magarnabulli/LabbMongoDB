@@ -151,7 +151,10 @@ namespace LabbMongoDBNeliz
             io.Print("Name of product: ");
             string prdname = io.GetInput();
             ProductModel prd = pDAO.ReadOne(prdname);
-            PrintProduct(prd);
+            if (prd.name != null) {   PrintProduct(prd);}
+       
+            else { io.Print("\n\tThe product couldnt be found..."); }
+    
             io.PrintBackToMenu();
         } //case2
         public void ShowAllProducts()
@@ -207,7 +210,7 @@ namespace LabbMongoDBNeliz
         {
             string[] values = new string[5];
 
-            io.Print("\n\tWhat do you want to update: \n\t[1] Name\n\t[2]Price\n\t[3] Description\n\t[4] Quantity\n\t[5]Category");
+            io.Print("\n\tWhat do you want to update: \n\t[1] Name\n\t[2] Price\n\t[3] Description\n\t[4] Quantity\n\t[5] Category");
             switch (ReadMenuChoice())
             {
                 case 1:
@@ -224,11 +227,12 @@ namespace LabbMongoDBNeliz
                     return values;
                 case 4:
                     io.Print("\n\t New quantity value: ");
-                    values[3] = io.GetInput().ToString().ToString();
+
+                    values[3] = RightFormatCheckQty().ToString();
                     return values;
                 case 5:
                     io.Print("\n\t New category: ");
-                    values[4] = io.GetInput();
+                    values[4] = ChooseOneFromListCategory();
                     return values;
             }
             return values;
