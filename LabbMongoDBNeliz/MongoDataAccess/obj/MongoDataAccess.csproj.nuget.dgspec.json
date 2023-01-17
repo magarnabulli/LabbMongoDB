@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ozkal\\Documents\\Skola\\MongoDB\\labb\\Labbv2\\LabbMongoDBNeliz\\LabbMongoDBNeliz\\LabbMongoDBNeliz.csproj": {}
+    "C:\\Users\\ozkal\\Documents\\Skola\\MongoDB\\labb\\Labbv2\\LabbMongoDBNeliz\\MongoDataAccess\\MongoDataAccess.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ozkal\\Documents\\Skola\\MongoDB\\labb\\Labbv2\\LabbMongoDBNeliz\\LabbMongoDBNeliz\\LabbMongoDBNeliz.csproj": {
+    "C:\\Users\\ozkal\\Documents\\Skola\\MongoDB\\labb\\Labbv2\\LabbMongoDBNeliz\\MongoDataAccess\\MongoDataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ozkal\\Documents\\Skola\\MongoDB\\labb\\Labbv2\\LabbMongoDBNeliz\\LabbMongoDBNeliz\\LabbMongoDBNeliz.csproj",
-        "projectName": "LabbMongoDBNeliz",
-        "projectPath": "C:\\Users\\ozkal\\Documents\\Skola\\MongoDB\\labb\\Labbv2\\LabbMongoDBNeliz\\LabbMongoDBNeliz\\LabbMongoDBNeliz.csproj",
+        "projectUniqueName": "C:\\Users\\ozkal\\Documents\\Skola\\MongoDB\\labb\\Labbv2\\LabbMongoDBNeliz\\MongoDataAccess\\MongoDataAccess.csproj",
+        "projectName": "MongoDataAccess",
+        "projectPath": "C:\\Users\\ozkal\\Documents\\Skola\\MongoDB\\labb\\Labbv2\\LabbMongoDBNeliz\\MongoDataAccess\\MongoDataAccess.csproj",
         "packagesPath": "C:\\Users\\ozkal\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ozkal\\Documents\\Skola\\MongoDB\\labb\\Labbv2\\LabbMongoDBNeliz\\LabbMongoDBNeliz\\obj\\",
+        "outputPath": "C:\\Users\\ozkal\\Documents\\Skola\\MongoDB\\labb\\Labbv2\\LabbMongoDBNeliz\\MongoDataAccess\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ozkal\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -39,16 +39,6 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "dependencies": {
-            "MongoDB.Bson": {
-              "target": "Package",
-              "version": "[2.18.0, )"
-            },
-            "MongoDB.Driver": {
-              "target": "Package",
-              "version": "[2.18.0, )"
-            }
-          },
           "imports": [
             "net461",
             "net462",
