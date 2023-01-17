@@ -151,10 +151,8 @@ namespace LabbMongoDBNeliz
             io.Print("Name of product: ");
             string prdname = io.GetInput();
             ProductModel prd = pDAO.ReadOne(prdname);
-            if (prd.name != null) {   PrintProduct(prd);}
-       
+            if (prd.name != null) { PrintProduct(prd); }
             else { io.Print("\n\tThe product couldnt be found..."); }
-    
             io.PrintBackToMenu();
         } //case2
         public void ShowAllProducts()
