@@ -13,12 +13,11 @@ namespace LabbMongoDBNeliz
         IProductDAO pDAO;
         public ProuductController(IUI io, IProductDAO pDAO)
         {
-            this.io= io;
-            this.pDAO= pDAO;
+            this.io = io;
+            this.pDAO = pDAO;
         }
         public void Start() //MENY FÖR HELA SKITEN
         {
-            int i = 1;
             bool menu = true;
             while (menu)
             {

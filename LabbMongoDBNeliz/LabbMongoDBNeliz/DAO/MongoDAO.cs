@@ -44,10 +44,7 @@ namespace LabbMongoDBNeliz.DAO
                 return true;
             }
         }
-        void IProductDAO.CreateMany(List<ProductModel> products)
-        {
-
-        }
+     
         List<ProductModel> IProductDAO.ReadAll()
         {
             List<ProductModel> productList = new List<ProductModel>();
